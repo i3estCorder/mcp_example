@@ -1,1 +1,26 @@
 # mcp_example
+
+이 저장소에는 [fastmcp](https://pypi.org/project/fastmcp/)로 구현한 간단한 MCP 서버 예제가 포함되어 있습니다.
+
+## 설치
+
+```bash
+pip install -r requirements.txt
+```
+
+## 실행
+
+```bash
+python hello_mcp.py
+```
+
+서버가 시작되면 `say_hello`와 `current_time` 두 가지 도구를 사용할 수 있습니다.
+
+### 사용 가능한 도구
+
+| 도구 이름 | 설명 | 예시 입력 | 예시 출력 |
+| --- | --- | --- | --- |
+| `say_hello` | 이름을 인사말로 응답합니다. | `{ "name": "Alice" }` | `"Hello, Alice!"`
+| `current_time` | 현재 UTC 시간을 ISO-8601 형식으로 반환합니다. | 입력 없음 | `"2024-01-01T12:00:00+00:00"`
+
+`say_hello` 도구는 공백만 입력되었을 때 자동으로 "there"로 대체하여 자연스러운 인사말을 제공합니다.
